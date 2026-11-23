@@ -1,0 +1,20 @@
+﻿<Window x:Class="ПрРПМ._20.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Справочник фильмов" Height="450" Width="400">
+    <StackPanel Margin="15">
+
+        <TextBlock Text="Выберите жанр:" FontWeight="Bold" Margin="0,0,0,5"/>
+        <ComboBox x:Name="GenreCombo" Width="200" Margin="0,0,0,15"
+                  SelectionChanged="GenreCombo_SelectionChanged"/>
+
+        <TextBlock Text="Доступные фильмы:" FontWeight="Bold" Margin="0,0,0,5"/>
+        <ListBox x:Name="FilmList" Height="150" Margin="0,0,0,15"/>
+
+        <Button Content="Посмотреть описание" Width="180" Height="30" 
+                HorizontalAlignment="Left" Click="ShowDescription_Click"/>
+
+        <TextBlock x:Name="DescriptionText" Margin="0,15,0,0" 
+                   TextWrapping="Wrap" FontStyle="Italic" Foreground="DarkBlue"/>
+    </StackPanel>
+</Window>   
